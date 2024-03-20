@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+.people {
+  grid-template-columns: repeat(2, 200px);
+  justify-content: center;
+  gap: 40px 30px;
+  min-width: 500px;
+  padding: 30px 35px;
+  display: grid;
+}
+
+@media (width >= 1000px) {
+  .people {
+    grid-template-columns: repeat(4, 200px);
+    padding: 30px 55px;
+  }
+}
+
+.person {
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s;
+  display: flex;
+  position: relative;
+}
+
+.person:hover:before {
+  content: "";
+  background-color: #eee;
+  border-radius: 10px;
+  width: 220px;
+  height: 287px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.person:hover .extra {
+  display: block;
+}
+
+.person:hover {
+  transform: scale(1.2);
+}
+
+.person__img {
+  border-radius: 50%;
+  height: 200px;
+  transition: border-radius 1s;
+}
+
+.person__img:hover {
+  border-radius: 60px;
+}
+
+.person__details {
+  z-index: 2;
+  margin-top: 8px;
+}
+
+.person__name {
+  color: #2f4f4f;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.person__sport {
+  color: #000;
+}
+
+.person__photo {
+  position: relative;
+}
+
+.person__rank {
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  position: absolute;
+  top: 42%;
+  right: 7px;
+}
+
+.extra {
+  text-align: center;
+  z-index: 2;
+  margin-top: 9px;
+  display: none;
+}
+
+.extra__sport, .extra__pay {
+  color: #000;
+  font-size: 18px;
+}
+/*# sourceMappingURL=index.b1276d39.css.map */
